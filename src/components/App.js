@@ -38,7 +38,6 @@ function App() {
       ) : (
         ""
       )}
-
       <div className="right">
         <Player
           currentSong={currentSong}
