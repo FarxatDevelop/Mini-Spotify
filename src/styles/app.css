@@ -1,0 +1,18 @@
+@import "./player.css";
+@import "./song.css";
+@import "./library.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: yellow;
+  width: 100%;
+  overflow: hidden;
+}
+.right {
+  width: 100%;
+}
