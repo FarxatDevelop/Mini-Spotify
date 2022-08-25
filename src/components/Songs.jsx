@@ -7,7 +7,7 @@ import {
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Song({
+function Songs({
   isPlaying,
   setIsPlaying,
   currentSong,
@@ -110,4 +110,4 @@ function Song({
   );
 }
 
-export default Song;
+export default Songs;

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Player from "./Player";
-import Song from "./Song";
+import Songs from "./Songs";
 import "../styles/app.css";
 import chillHop from "../data/util";
 import Library from "./Library";
@@ -46,7 +46,7 @@ function App() {
           bg={bg}
           setBg={setBg}
         />
-        <Song
+        <Songs
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
           currentSong={currentSong}
