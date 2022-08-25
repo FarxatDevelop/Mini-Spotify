@@ -65,6 +65,7 @@ function Songs({
           musicRef.current.paused ? setIsPlaying(true) : setIsPlaying(true);
         }
       }
+      return index;
     });
   };
 
