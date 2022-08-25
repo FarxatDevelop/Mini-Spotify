@@ -7,10 +7,19 @@ function LibrarySong({
   setCurrentSong,
   musicRef,
   isPlaying,
+  setSongs,
 }) {
-  const { name, artist, cover, active } = song;
+  let { name, artist, cover, active } = song;
 
   const indeX = (index) => {
+    songs.map((song) => {
+      song.active = false;
+      return song;
+    });
+    songs[index].active = true;
+    if (active) {
+      setSongs([...songs]);
+    }
     setCurrentSong(songs[index]);
     if (isPlaying) {
       musicRef.current.pause();

@@ -3,6 +3,7 @@ import LibrarySong from "./LibrarySong";
 
 function Library({
   songs,
+  setSongs,
   songIndex,
   setSongIndex,
   setCurrentSong,
@@ -14,17 +15,16 @@ function Library({
   setLibrayModal,
   bg,
 }) {
-
-
-
   return (
-    <div className="library-container" style={{background: bg ? "yellow" : "#fff"}}>
+    <div
+      className="library-container"
+      style={{ background: bg ? "yellow" : "#fff" }}
+    >
       <div className="top">
         <h1>Library</h1>
         <button onClick={() => setLibrayModal(!librayModal)}>X</button>
       </div>
       {songs.map((song, index) => {
-        song.active = false;
         return (
           <LibrarySong
             songs={songs}
@@ -38,6 +38,7 @@ function Library({
             musicRef={musicRef}
             duratinRef={duratinRef}
             isPlaying={isPlaying}
+            setSongs={setSongs}
           />
         );
       })}

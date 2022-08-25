@@ -7,11 +7,12 @@ import Library from "./Library";
 
 function App() {
   // State
-  const [songs] = useState(chillHop());
+  const [songs, setSongs] = useState(chillHop());
+
   const [bg, setBg] = useState(false);
   const [currentSong, setCurrentSong] = useState(songs[2]);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [librayModal, setLibrayModal] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [librayModal, setLibrayModal] = useState(true);
 
   // Ref
   const musicRef = useRef(null);
@@ -34,6 +35,7 @@ function App() {
           isPlaying={isPlaying}
           setLibrayModal={setLibrayModal}
           librayModal={librayModal}
+          setSongs={setSongs}
         />
       ) : (
         ""

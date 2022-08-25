@@ -37,7 +37,7 @@
   background-color: transparent;
 }
 .library-song:hover {
-  background-color: #feffff;
+  background-color: #e0e4e4;
 }
 .library-song-img {
   width: 50px;
@@ -50,7 +50,10 @@
   border-radius: 50%;
 }
 .selected-song {
-  background-color: #feffff;
+  background-color: rgb(237, 188, 231);
+}
+.selected-song:hover {
+  background-color: rgb(246, 178, 238);
 }
 @media (max-width: 936px) {
   .library-container {

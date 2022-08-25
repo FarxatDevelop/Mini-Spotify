@@ -48,7 +48,7 @@ function Songs({
       ":" +
       Math.floor(time % 60)
         .toString()
-        .slice(-2)
+        .slice(-1)
     );
   };
 
@@ -61,6 +61,7 @@ function Songs({
           index++;
         }
         if (index !== -1 && index !== songs.length) {
+          songs[index].active = true;
           setCurrentSong(songs[index]);
           musicRef.current.paused ? setIsPlaying(true) : setIsPlaying(true);
         }
