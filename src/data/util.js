@@ -42,6 +42,16 @@ function chillHop() {
       id: uuid4(),
       active: false,
     },
+    {
+      name: "Inta Eyh",
+      cover:
+        "https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/97/c3/b3/97c3b31d-f298-af19-dd90-074478b35b0a/196006901554.jpg/400x400cc.jpg",
+      artist: "Simge",
+      audio: "/uploads/music/2020/11/Nancy_Ajram_-_Inta_Eyh_XZEEZ_Remix.mp3",
+      color: ["#AEBBDB", "#4A976D"],
+      id: uuid4(),
+      active: false,
+    },
   ];
 }
 

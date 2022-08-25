@@ -103,8 +103,8 @@ function Songs({
         <audio
           ref={musicRef}
           onTimeUpdate={timeUpdateHandler}
-          src={audio}
           onLoadedMetadata={timeUpdateHandler}
+          src={audio}
         ></audio>
         <div className="play-control">
           <FontAwesomeIcon
