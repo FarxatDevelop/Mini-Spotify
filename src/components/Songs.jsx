@@ -52,6 +52,22 @@ function Songs({
     );
   };
 
+  const switchMusic = (direction) => {
+    songs.map((song, index) => {
+      if (song.id === currentSong.id) {
+        if (direction) {
+          index--;
+        } else {
+          index++;
+        }
+        if (index !== -1 && index !== songs.length) {
+          setCurrentSong(songs[index]);
+          musicRef.current.paused ? setIsPlaying(true) : setIsPlaying(true);
+        }
+      }
+    });
+  };
+
   const DragHandler = (e) => {
     musicRef.current.currentTime = e.target.value;
     setSongInfo({
@@ -80,7 +96,7 @@ function Songs({
             />
           </div>
           <div className="time">
-            <h4>{getTime(durationTime)}</h4>
+            <h4>{getTime(durationTime) ? getTime(durationTime) : "0:00"}</h4>
           </div>
         </div>
         <audio
@@ -92,17 +108,12 @@ function Songs({
         <div className="play-control">
           <FontAwesomeIcon
             icon={faAngleLeft}
-            onClick={() => setCurrentSong(songs[1])}
+            onClick={() => switchMusic(true)}
           />
           <FontAwesomeIcon onClick={play} icon={isPlaying ? faPause : faPlay} />
           <FontAwesomeIcon
             icon={faAngleRight}
-            onClick={() => {
-              setCurrentSong(songs[3]);
-              if (!isPlaying) {
-                musicRef.current.play();
-              }
-            }}
+            onClick={() => switchMusic(false)}
           />
         </div>
       </div>
